@@ -23,15 +23,15 @@ function processForm(req, res) {
         res.writeHead(200, {
             'content-type': 'text/plain'
         });
-        
+
         res.end(JSON.stringify({
             fields: fields
         }));
 
         console.log('posted fields:\n');
-        console.log(util.inspect({
-            fields: fields
-        }));
+        console.log(JSON.stringify({
+          fields: fields
+      }));
     });
 }
 
