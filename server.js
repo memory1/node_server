@@ -19,7 +19,7 @@ function processForm(req, res) {
     var form = new formidable.IncomingForm();
 
     form.parse(req, function (err, fields) {
-
+        fields.id = "ABC123";
         res.writeHead(200, {
             'content-type': 'text/plain'
         });
