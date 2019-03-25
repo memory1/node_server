@@ -10,7 +10,22 @@ var server = http.createServer(function (req, res) {
         processForm(req, res);
         return;
     }
-
+    if (req.method.toLowerCase() == 'get') {
+        var data = {
+            data:{
+                lanuages:[
+                    'English',
+                    'Spanish',
+                    'German',
+                    'Other'
+                ]
+            }
+        };
+        var responseData = JSON.stringify(data);
+        res.end(responseData);
+        console.log("get: ",responseData);
+        return;
+    }
     res.end();
 });
 
