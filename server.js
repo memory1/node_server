@@ -13,7 +13,7 @@ var server = http.createServer(function (req, res) {
     if (req.method.toLowerCase() == 'get') {
         var data = {
             data:{
-                lanuages:[
+                languages:[
                     'English',
                     'Spanish',
                     'German',
